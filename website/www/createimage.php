@@ -1,31 +1,31 @@
 <?php
 /**
- * This is a modified version of the Daladi Framework script 'createimage.php'
+ * Create and return a scaled down copy of a master clock photo
  * 
  * This script is run by Apache when the user requests an image that is not available in one of the
- * image cache directories.  It creates a scaled copy of a master image
- * and saves it in the requested location, so that next time it is served directly instead of
- * coming back here.  Finally the scaled image is returned to the client.
+ * image cache directories ('cache0' through to 'cache5').  It creates a scaled copy of the required image
+ * and saves it in the requested location, so that next time Apache serves it directly as a static
+ * file instead of coming back here.  Finally the scaled image is returned to the client.
  *
  * The required size is specified as an integer included in the image filename. e.g. 'image_500.jpg'
  * would request master image 'image.jpg' scaled to 500 pixels
  *
- * Requirements:
+ * Dependencies:
  *
- * In the directory that is the parent to the one containing this file, a file called 'config.php'
+ * 1. In the directory that is the parent to the one containing this file, a file called 'config.php'
  * that defines the following constants:
  *
- * IMAGE_CACHE_PATH     Full path to a directory to contain cached images.  Directory must be
- *                          writable by webserver
- * MASTER_IMAGE_PATH    Full path to a directory containing the site's master images
+ * WEB_ROOT_PATH        Full path to the webserver root directory, containing the set of image cache directories
+ * MASTER_IMAGE_PATH    Full path to the directory containing the clock master images
+ * JPEG_QUALITY         Quality of cached JPEG images that are created (min 1, max 100)
+ *
+ * 2. The PHP class 'Image.php' that handles image scaling
  *
  * @author Thomas Daly
- * @copyright 2020
- * @access public
+ * @copyright 2013 Thomas Daly
+ * @license MIT
  */
 
-
-// Find the system config script - path relative to this file
     require '../config.php';
     require '../lib/Image.php';
 
@@ -38,7 +38,7 @@
     if (isset($_SERVER['REQUEST_URI']))
         $uri = (string)$_SERVER['REQUEST_URI'];
 
-// $imgpath should be the same as $uri
+// Validate $uri.  $imgpath should be the same as $uri
     $imgpath = parse_url($uri, PHP_URL_PATH);
 
 /*
@@ -65,8 +65,8 @@
     if (isset($pathinfo['extension']))
         $extension = $pathinfo['extension'];
 
-// The full server path to the cache directory
-    $cachedirpath = IMAGE_CACHE_PATH . $cachedir;
+// The full server path to the requested cache directory
+    $cachedirpath = WEB_ROOT_PATH . $cachedir;
 
 // Determine required size of scaled image from requested filename
     preg_match('/(.+)_(\d+)$/', $filename, $matches);

@@ -1,12 +1,11 @@
 <?php
 /**
- * Output a 'not found' page together with a 404 HTTP header.  
- * On entry, $err is set to an error message to display
+ * Output a '404 not found' page together with a 404 HTTP header.
+ * On entry, $err is set to an error message string to display
  *
- * @package DaladiFramework
  * @author Thomas Daly
- * @copyright 2017
- * @access public
+ * @copyright 2013 Thomas Daly
+ * @license MIT
  */
 
     if (isset($_GET['error']))

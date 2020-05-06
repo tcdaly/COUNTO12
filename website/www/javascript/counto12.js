@@ -1,9 +1,8 @@
 /**
- * Counto12 main javascript
- *
- * @author Thomas Daly
- * @copyright Counto12/code (c) 2015 Thomas Daly
- * @version 2.0.3
+ * @file Counto12 application client-side javascript
+ * @author Thomas Daly (excluding 'RunPrefixMethod' function)
+ * @copyright 2013 Thomas Daly (excluding 'RunPrefixMethod' function)
+ * @license MIT
  */
 
 // clock aspect ratio
@@ -33,7 +32,7 @@
 // current and previous time
     var ct, ch, cm, cs, ph = -1, pm = -1, ps = -1;
 
-    // Read current time
+// Read current time
     ct = new Date();
     ch = ct.getHours();
     cm = ct.getMinutes();
@@ -52,14 +51,15 @@
 
     $(document).ready(init1);
 
-/* Application init stage 1.
 
-        Determine image size, preload initial batch of images
-*/
+    /**
+     * Stage 1 application initialisation
+     * Determine image size, preload initial batch of images
+     * @function
+     */
     function init1()
     {
         var data;
-
     // Determine details of client device, storing in object agent.  Data returned as JSON
         $.getJSON('index.php', 'ua=1', function(data) {
             window.agent = data;
@@ -77,21 +77,17 @@
                     });
                 });
             });
-
         // draw clock outline and display 'loading' indicator
             sizeclock();
-
-        /* temp code: display info page on startup
-                    $('#info').show();
-                    infoopen = true;
-                    $('#textcontainer').perfectScrollbar();
-        /* end temp code */
         });
     }
 
-/* Application init stage 2.  Run when first batch of images have preloaded.
 
-    Fade out loading indicator and put initial time on clock */
+    /**
+     * Stage 2 application initialisation. Run when first batch of images have preloaded.
+     * Fade out loading indicator and put initial time on clock
+     * @function
+     */
     function init2()
     {
         $('#loading').fadeOut(700, function() {
@@ -113,20 +109,17 @@
             $('#m2').append('<img src="" alt="">');
             $('#s2').append('<img src="" alt="">');
 
-            if (window.agent.type == 'Desktop')
-            {
+            if (window.agent.type == 'Desktop') {
                 // Dynamically resize clock according to browser window size (desktop only)
                 $(window).resize(sizeclock);
             }
-            else
-            {
+            else {
                 // orientation change handler (mobile only)
                 window.addEventListener('orientationchange', orientationChange);
             }
 
             // update the time every 83ms (equals frame rate of 12fps)
             window.setInterval(update, 83);
-            //update();
 
             // Fade up control bar
             $('#controlbg').fadeIn(400);
@@ -137,14 +130,10 @@
             {
                 $('#fullscreen').click(function() {
                     var e = document.getElementById("container");
-                    if (RunPrefixMethod(document, "FullScreen") || RunPrefixMethod(document, "IsFullScreen"))
-
-                    {
+                    if (RunPrefixMethod(document, "FullScreen") || RunPrefixMethod(document, "IsFullScreen")) {
                         RunPrefixMethod(document, "CancelFullScreen");
                     }
-                    else
-
-                    {
+                    else {
                         RunPrefixMethod(e, "RequestFullScreen");
                     }
                 });
@@ -152,14 +141,12 @@
 
             // Add onclick event handler to full screen button
             $('#infoicon').click(function() {
-                if (infoopen)
-                {
+                if (infoopen) {
                     $('#textcontainer').perfectScrollbar('destroy');
                     $('#info').hide();
                     infoopen = false;
                 }
-                else
-                {
+                else {
                     $('#textcontainer').height(vpheight - 120 - 70);
                     $('#info').show();
                     infoopen = true;
@@ -179,7 +166,11 @@
         preloadsec(60-prl);
     }
 
-// Determine physical height of images to download from server in pixels
+
+    /**
+     * Determine the height of images to download from server in pixels
+     * @function
+     */
     function pimageheight()
     {
         // Width, height and aspect ratio of physical display device when in landscape mode
@@ -190,43 +181,36 @@
         msg += "Device family: " + window.agent.devicefamily + " CR";
 
         // Some iOS and Android mobile devices have high-res retina displays
-        if (window.agent.type == 'Mobile' && window.devicePixelRatio > 1)
-        {
+        if (window.agent.type == 'Mobile' && window.devicePixelRatio > 1) {
             swidth = screen.width * window.devicePixelRatio;
             sheight = screen.height * window.devicePixelRatio;
         }
-        else
-        {
+        else {
         // Desktop monitor
             swidth = screen.width;
             sheight = screen.height;
         }
 
-        /*  Compare aspect ratio of clock with that of screen. Make comparison independent of device orientation.
-            Normalise orientation to landscape
-        */
-        if (swidth > sheight)
-        {
+        /* Compare aspect ratio of clock with that of screen. Make comparison 
+            independent of device orientation. Normalise orientation to landscape */
+        if (swidth > sheight) {
             // display is in landscape mode
             nswidth = swidth;
             nsheight = sheight;
         }
-        else
-        {
+        else {
             // display is in portrait mode
             nswidth = sheight;
             nsheight = swidth;
         }
         nsaspect = nswidth / nsheight;
 
-        if (nsaspect > caspect)
-        {
+        if (nsaspect > caspect) {
             /* screen is wider than clock: pillarbox display.  So height of clock must be
                 the height of the screen */
             piheight = Math.round(nsheight);
         }
-        else
-        {
+        else {
             /* screen is narrower than clock: letterbox display.  Width of clock must be
                 the width of the screen */
             cwidth = nswidth;
@@ -234,16 +218,13 @@
             piheight = Math.round(cheight);
         }
 
-    // Maximum available resolution of photos is 1050
-        if (piheight > 1050)
-        {
+    // Maximum available vertical height of photos is 1050
+        if (piheight > 1050) {
             piheight = 1050;
         }
 
     // Log device details on server
-
-        if (window.agent.osfamily == 'iOS')
-        {
+        if (window.agent.osfamily == 'iOS') {
             msg += "Guess at iOS device model: " + guess_device(nswidth, nsheight) + " CR";
         }
         msg    += 'Reported device pixels: ' + screen.width + ' x ' + screen.height + 'CR'
@@ -251,21 +232,28 @@
             + 'Reported layout viewport: ' + document.documentElement.clientWidth + ' x ' + document.documentElement.clientHeight + 'CR'
             + 'Device pixel ratio: ' + window.devicePixelRatio + 'CR'
             + 'Physical image height: ' + piheight + 'CR';
-
         log(msg);
     }
 
+
+    /**
+     * Save a message in the server's site log
+     * @function
+     * @param {string} msg - The message to save
+     */
     function log(msg)
     {
         $.get('index.php', 'logmsg=' + msg);
     }
 
-// Reset physical device dimensions and clock size on device orientation change
+
+    /**
+     * Reset physical device dimensions and clock size on device orientation change
+     * @function
+     */
     function orientationChange()
     {
-        switch(window.orientation)
-
-        {
+        switch(window.orientation) {
             // landscape
             case -90:
             case 90:
@@ -276,37 +264,36 @@
             default:
                 log('CROrientation change to portrait CR');
                 break;
-
         }
         pimageheight();
         sizeclock();
     }
 
-/* Set initial clock size (mobile and desktop) or resize clock according to window size change (desktop only).
-    Clock is sized to sit within a rectangular layout viewport with width vpwidth and height vpheight */
+
+    /**
+     * Set initial clock size (mobile and desktop) or resize clock according to window size change 
+     * (desktop only).  Clock is sized to sit within a rectangular layout viewport with width 
+     * vpwidth and height vpheight 
+     * @function
+     */
     function sizeclock()
     {
-        if (window.agent.type == 'Desktop')
-        {
+        if (window.agent.type == 'Desktop') {
             // The size of the user's browser window gives us the layout viewport
             vpwidth = document.documentElement.clientWidth;
             vpheight = document.documentElement.clientHeight;
-
             // Determine whether to display right info column
-            if (vpwidth > 700)
-            {
+            if (vpwidth > 700) {
                 $('#col_right').show();
             }
-            else
-            {
+            else {
                 $('#col_right').hide();
             }
-
         }
         else
         {
-            /* For mobile devices base the clock size on the reported physical screen size, which should in turn
-                set the layout viewport to be the same */
+            /* For mobile devices base the clock size on the reported physical screen size, 
+            which should in turn set the layout viewport to be the same */
             vpwidth = screen.width;
             vpheight = screen.height;
         }
@@ -341,10 +328,9 @@
         // Displayed image width = (clock width - (gap between images * 2)) / 3
         var iwidth = ((cwidth - (gap * 2)) / 3);
 
-        $('.frame').css({    'width': iwidth,
+        $('.frame').css({   'width': iwidth,
                             'height': cheight,
                             'top': 0
-
                             });
         $('.h').css('left', 0);
         $('.m').css('left', iwidth+gap + 'px');
@@ -352,8 +338,7 @@
         //$('#s1').css('left', ((iwidth+gap)*2) + 200 + 'px');
 
         // Set position of control bar
-        if (cdisplay == 'letterbox')
-        {
+        if (cdisplay == 'letterbox') {
             // Control bar at bottom
             $('#controlbg,#controltext').css({  'left':'0',
                                                 'top':'auto',
@@ -364,8 +349,7 @@
                                                 'padding-top':'0px'
                                                 });
         }
-        else
-        {
+        else {
             // Control bar at left
             $('#controlbg,#controltext').css({  'left':'0',
                                                 'top':'0',
@@ -378,29 +362,28 @@
         }
 
         // Display full screen mode icon in all browsers except IE
-        if (window.agent.type == "Desktop" && window.agent.uafamily != 'IE')
-        {
+        if (window.agent.type == "Desktop" && window.agent.uafamily != 'IE') {
             $('#fullscreen').show();
         }
 
         // scrollbar update
-        if (infoopen)
-        {
+        if (infoopen) {
             $('#textcontainer').height(vpheight - 120 - 70);
             $('#textcontainer').perfectScrollbar('update');
         }
     }
 
-/* Create new image object and load an image into it
-    cat (string):     either h, m or s
-    n (integer):     number displayed on image
 
-    returns: pointer to new image object
-*/
+    /**
+     * Create new image object and load an image into it
+     * @function
+     * @param {string} cat - either 'h', 'm' or 's'
+     * @param {number} n - number displayed on image
+     * @return {object} Pointer to new image object
+     */
     function loadimage(cat, n)
     {
         var filename, obj = new Image;
-        //console.log(cat, n, slib);
         switch(cat)
         {
             case 'h':
@@ -417,11 +400,15 @@
         // 0 <= n <= 59.  There are 6 cache folders numbered 0 - 5 with images for 10 digits in each
         obj.src = 'cache' + Math.floor(n / 10) + '/' + filename;
         obj.alt = n + cat;
-        //console.log('Requested image', obj.src);
         return obj;
     }
 
-// Preload seconds images.  x = number of images to preload
+
+    /**
+     * Preload images
+     * @function
+     * @param {number} x - number of images to preload
+     */
     function preloadsec(x)
     {
         for (var j=0; j<x; j++)
@@ -434,7 +421,11 @@
         }
     }
 
-// Preload second, minute and hour images before clock runs
+
+    /**
+     * Preload second, minute and hour images before clock runs
+     * @function
+     */
     function preload()
     {
         /* the width of the loading progress bar, as a percentage of the total width, to increment
@@ -456,8 +447,7 @@
         /* preloading 3 minutes means clock can run for at least 3 minutes
             in event of network failure */
         mindex = cm;
-        for (j=0; j<3; j++)
-        {
+        for (j=0; j<3; j++) {
             m[mindex] = loadimage('m', mindex);
             $('#preload').append(m[mindex]);
             mindex = (mindex + 1) % 60;
@@ -501,7 +491,11 @@
         });
     }
 
-// Update clock display
+
+    /**
+     * Update clock display
+     * @function
+     */
     function update()
     {
         var i;
@@ -513,24 +507,21 @@
         cs = ct.getSeconds();
 
         // compare with previous time
-        if (ch != ph)
-        {
+        if (ch != ph) {
             // load a new hour image from server for later use
             h[hindex] = null;
             h[hindex] = loadimage('h', hindex);
             hindex = (hindex + 1) % 24;
 
             // swap z-index of two hour frames
-            if ($('#h1').css('z-index') == '1')
-            {
+            if ($('#h1').css('z-index') == '1') {
                 // s1 now visible
                 $('#h1').css('z-index', '2');
                 $('#h2').css('z-index', '1');
                 // put next frame (current hour + 1) in h2
                 $(h[(ch + 1) % 24]).replaceAll('#h2 img');
             }
-            else
-            {
+            else {
                 // s2 now visible
                 $('#h1').css('z-index', '1');
                 $('#h2').css('z-index', '2');
@@ -539,24 +530,21 @@
             }
         }
 
-        if (cm != pm)
-        {
+        if (cm != pm) {
             // load a new minute image from server for later use
             m[mindex] = null;
             m[mindex] = loadimage('m', mindex);
             mindex = (mindex + 1) % 60;
 
             // swap z-index of two hour frames
-            if ($('#m1').css('z-index') == '1')
-            {
+            if ($('#m1').css('z-index') == '1') {
                 // s1 now visible
                 $('#m1').css('z-index', '2');
                 $('#m2').css('z-index', '1');
                 // put next frame (current minute + 1) in m2
                 $(m[(cm + 1) % 60]).replaceAll('#m2 img');
             }
-            else
-            {
+            else {
                 // s2 now visible
                 $('#m1').css('z-index', '1');
                 $('#m2').css('z-index', '2');
@@ -565,8 +553,7 @@
             }
         }
 
-        if (cs != ps)
-        {
+        if (cs != ps) {
 
             /* load new second image 30s ahead.  Don't use the global sindex here because it could conflict with
                 second images that are still preloading */
@@ -575,16 +562,14 @@
             s[i] = loadimage('s', i);
 
             // swap z-index of two second frames
-            if ($('#s1').css('z-index') == '1')
-            {
+            if ($('#s1').css('z-index') == '1') {
                 // s1 now visible
                 $('#s1').css('z-index', '2');
                 $('#s2').css('z-index', '1');
                 // put next frame (current second + 1) in s2
                 $(s[(cs + 1) % 60]).replaceAll('#s2 img');
             }
-            else
-            {
+            else {
                 // s2 now visible
                 $('#s1').css('z-index', '1');
                 $('#s2').css('z-index', '2');
@@ -599,11 +584,14 @@
         ps = cs;
     }
 
-/*
-    Enter/exit full screen mode
-    Code (c) Craig Buckler, Director of OptimalWorks
-    http://www.sitepoint.com/html5-full-screen-api/
-*/
+
+    /**
+     * Enter/exit full screen mode
+     * @author Craig Buckler, Director of OptimalWorks
+     * @copyright Craig Buckler
+     * @tutorial http://www.sitepoint.com/html5-full-screen-api/
+     * @function
+     */
     function RunPrefixMethod(obj, method) {
         var pfx = ["webkit", "moz", "ms", "o", ""];
 
@@ -623,10 +611,13 @@
         }
     }
 
-/*
-    Make a guess at device model based on reported data.  Currently only supports iOS devices
-    dw = device width, dh = device height
-*/
+
+    /**
+     * Make a guess at device model based on reported data.  Currently only supports iOS devices
+     * @param {number} dw - device width
+     * @param {number} dh - device height
+     * @return {string} - list of possible devices
+    */
     function guess_device(dw, dh)
     {
         var possdevs = '';

@@ -1,12 +1,11 @@
 <?php
 /**
- * Output a '500 Internal Server Error' page together with a 500 HTTP header.  
+ * Output a '500 Internal Server Error' page together with a 500 HTTP header.
  * On entry, $err is set to an error message to display
  *
- * @package DaladiFramework
  * @author Thomas Daly
- * @copyright 2018
- * @access public
+ * @copyright 2013 Thomas Daly
+ * @license MIT
  */
 
     http_response_code(500);

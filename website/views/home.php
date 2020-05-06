@@ -1,3 +1,14 @@
+<?php
+/**
+ * Counto12 application HTML
+ *
+ * This HTML view is included by the main application script 'index.php'
+ *
+ * @author Thomas Daly
+ * @copyright 2013 Thomas Daly
+ * @license MIT
+ */
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -42,7 +53,6 @@
             break;
     }
 ?>
-
 </head>
 
 <body>
@@ -97,24 +107,20 @@
 
                         <h3>CREDITS</h3><small>Producers: <strong>Yujin&nbsp;Yun</strong>, <a href="https://app.yunojuno.com/p/christina-katsantoni"><strong>Christina&nbsp;Katsantoni</strong></a> and <strong>Ewa&nbsp;Balazinska</strong>. Photographers: <a href="http://www.londonsartistquarter.org/artist-hub/users/memento8012/profile"><strong>SangDuck&nbsp;Bae</strong></a>, <strong><a href="http://www.paulyeungvision.com/">Paul&nbsp;Yeung</a></strong>, <strong>Amanda&nbsp;Shiu</strong> and <strong>Tomoko&nbsp;Kinoshita</strong>. Programmers: <strong><a href="http://thomasdaly.co.uk/">Thomas&nbsp;Daly</a></strong> and <strong>Stephen&nbsp;Pho</strong></small>
                     </div>
-                    <p>Seen in action here, COUNTO12 was a digital clock and countdown timer to the opening ceremony of the <a target="_blank" href="http://www.olympic.org/london-2012">London 2012 Olympic Games</a>.  It comprised over 500 photographic portraits of people living, working and studying in the five Olympic host boroughs of Greenwich, Tower Hamlets, Hackney, Newham and Waltham Forest. COUNTO12 was a contribution to the UK National Portrait Gallery/BTís <a target="_blank" href="http://roadto2012.npg.org.uk/"><cite>Road&nbsp;to&nbsp;2012</cite></a> photography exhibition and was designed as a screensaver that can be installed on Mac and PC&nbsp;computers.</p>
+                    <p>Seen in action here, COUNTO12 was a digital clock and countdown timer to the opening ceremony of the <a target="_blank" href="http://www.olympic.org/london-2012">London 2012 Olympic Games</a>.  It comprised over 500 photographic portraits of people living, working and studying in the five Olympic host boroughs of Greenwich, Tower Hamlets, Hackney, Newham and Waltham Forest. COUNTO12 was a contribution to the UK National Portrait Gallery/BT‚Äôs <a target="_blank" href="http://roadto2012.npg.org.uk/"><cite>Road&nbsp;to&nbsp;2012</cite></a> photography exhibition and was designed as a screensaver that can be installed on Mac and PC&nbsp;computers.</p>
 
-                    <p>In 2011, <cite>Road to 2012</cite> photographer Brian Griffin, sound artist Martyn Ware and film academic Julian Henriques challenged the students of <a target="_blank" href="http://www.gold.ac.uk/">Goldsmithís University of London</a> to create and contribute digital media works.  The students were asked to explore, experiment and reflect on what the London Olympic and Paralympic Games meant to them, to a neighbourhood, to a community, to East London ñ and to tell that story. COUNTO12 is one of the resulting&nbsp;works.</p>
+                    <p>In 2011, <cite>Road to 2012</cite> photographer Brian Griffin, sound artist Martyn Ware and film academic Julian Henriques challenged the students of <a target="_blank" href="http://www.gold.ac.uk/">Goldsmith‚Äôs University of London</a> to create and contribute digital media works.  The students were asked to explore, experiment and reflect on what the London Olympic and Paralympic Games meant to them, to a neighbourhood, to a community, to East London ‚Äì and to tell that story. COUNTO12 is one of the resulting&nbsp;works.</p>
 
-                    <p>ìWe felt eager to portray our local environment of people living, working and studying in east London and represent them in their natural surroundings and everyday occupations,î said creators Yujin, Christina and Ewa. ìFor COUNTO12 we photographed over 500 people living, working and studying in the Olympic-host boroughs. Different faces, different places, same feeling of&nbsp;anticipation...î</p>
+                    <p>‚ÄúWe felt eager to portray our local environment of people living, working and studying in east London and represent them in their natural surroundings and everyday occupations,‚Äù said creators Yujin, Christina and Ewa. ‚ÄúFor COUNTO12 we photographed over 500 people living, working and studying in the Olympic-host boroughs. Different faces, different places, same feeling of&nbsp;anticipation...‚Äù</p>
 
-                    <p>The National Portrait Galleryís <cite>Road to 2012</cite> was a three-year photography project that recorded the inspirational men and women who worked and trained to make the London Olympic Games happen.  Between 2009 and 2012, numerous photographic portraits celebrated the people, both high-profile and behind the scenes, who collectively prepared the event. At the heart of the project was the exploration of inspirational, personal narratives.  The photographs were displayed at a series of summer exhibitions at the National Portrait Gallery and&nbsp;online.</p>
+                    <p>The National Portrait Gallery‚Äôs <cite>Road to 2012</cite> was a three-year photography project that recorded the inspirational men and women who worked and trained to make the London Olympic Games happen.  Between 2009 and 2012, numerous photographic portraits celebrated the people, both high-profile and behind the scenes, who collectively prepared the event. At the heart of the project was the exploration of inspirational, personal narratives.  The photographs were displayed at a series of summer exhibitions at the National Portrait Gallery and&nbsp;online.</p>
 
                     <p>COUNTO12 was screened at the gallery on 5 August 2011 as part of <a target="_blank" href="http://roadto2012.npg.org.uk/participation/reanimate-late-shift-extra"><cite>ReAnimate Late Shift Extra</cite></a>. Late Shift Extra took over the gallery with a night of sensory stimulation exploring the body, movement and the senses with artistic collaborations and interventions of live music, sound art, film, performance and&nbsp;philosophy.</p>
                 </div>
             </div>
-
         </div>
-
     </div>
-
     <!-- never visible, used to attach preloaded images -->
     <div id="preload"></div>
-
 </body>
 </html>
