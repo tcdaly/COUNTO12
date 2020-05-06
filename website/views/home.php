@@ -92,22 +92,25 @@
                     <div id="col_right">
                         <h2>DOWNLOAD AND INSTALL COUNTO12 SCREENSAVER</h2>
 
-                        <p><strong><a href="http://roadto2012.npg.org.uk/_store/Standard%20res%20COUNTO12%20%20PC/installcounto12.exe">Download COUNTO12 PC Standard</a></strong> for monitors of at least 1280 x 800 pixels<br>
+                        <h3>PC</h3>
+                        <p><strong><a href="/downloads/InstallCounto12.exe">Download COUNTO12 PC Standard</a></strong> for monitors of at least 1280 x 800 pixels<br>
 
-                        <strong><a href="http://roadto2012.npg.org.uk/_store/High%20res%20COUNTO12%20%20PC/installcounto12hi.exe">Download COUNTO12 PC High Res</a></strong> for monitors of at least 1680 x 1050 pixels<br>
+                        <strong><a href="/downloads/InstallCounto12hi.exe">Download COUNTO12 PC High Res</a></strong> for monitors of at least 1680 x 1050 pixels<br>
 
-                        <a target="_blank" href="http://roadto2012.npg.org.uk/_store/counto12_readme_pc.pdf">PC installation instructions</a></p>
+                        <a target="_blank" href="/downloads/counto12_screensaver_readme_pc.pdf">PC installation instructions</a></p>
 
-                        <p><strong><a href="http://roadto2012.npg.org.uk/_store/counto12_mac_standard.zip">Download COUNTO12 Mac Standard</a></strong> for monitors of at least 1280 x 800 pixels<br>
+                        <h3>MAC</h3>
+                        <p><strong><a href="/downloads/counto12_screensaver_mac.zip">Download COUNTO12 Mac Standard</a></strong> for monitors of at least 1280 x 800 pixels<br>
 
-                        <strong><a href="http://roadto2012.npg.org.uk/_store/counto12_mac_highres.zip">Download COUNTO12 Mac High Res</a></strong> for monitors of at least 1680 x 1050 pixels<br>
+                        <strong><a href="/downloads/counto12_screensaver_mac_hi.zip">Download COUNTO12 Mac High Res</a></strong> for monitors of at least 1680 x 1050 pixels<br>
 
-                        <a target="_blank" href="http://roadto2012.npg.org.uk/_store/counto12_readme_mac.pdf">Mac installation instructions</a>
+                        <a target="_blank" href="/downloads/counto12_screensaver_readme_mac.pdf">Mac installation instructions</a>
                         </p>
 
-                        <h3>CREDITS</h3><small>Producers: <strong>Yujin&nbsp;Yun</strong>, <a href="https://app.yunojuno.com/p/christina-katsantoni"><strong>Christina&nbsp;Katsantoni</strong></a> and <strong>Ewa&nbsp;Balazinska</strong>. Photographers: <a href="http://www.londonsartistquarter.org/artist-hub/users/memento8012/profile"><strong>SangDuck&nbsp;Bae</strong></a>, <strong><a href="http://www.paulyeungvision.com/">Paul&nbsp;Yeung</a></strong>, <strong>Amanda&nbsp;Shiu</strong> and <strong>Tomoko&nbsp;Kinoshita</strong>. Programmers: <strong><a href="http://thomasdaly.co.uk/">Thomas&nbsp;Daly</a></strong> and <strong>Stephen&nbsp;Pho</strong></small>
+                        <h3>CREDITS</h3>
+                        <small>Producers: <strong>Yujin&nbsp;Yun</strong>, <a href="https://app.yunojuno.com/p/christina-katsantoni"><strong>Christina&nbsp;Katsantoni</strong></a> and <strong>Ewa&nbsp;Balazinska</strong>. Photographers: <a href="http://www.londonsartistquarter.org/artist-hub/users/memento8012/profile"><strong>SangDuck&nbsp;Bae</strong></a>, <strong>Paul&nbsp;Yeung</strong>, <strong>Amanda&nbsp;Shiu</strong> and <strong>Tomoko&nbsp;Kinoshita</strong>. Programmers: <strong><a href="http://thomasdaly.co.uk/">Thomas&nbsp;Daly</a></strong> and <strong>Stephen&nbsp;Pho</strong></small>
                     </div>
-                    <p>Seen in action here, COUNTO12 was a digital clock and countdown timer to the opening ceremony of the <a target="_blank" href="http://www.olympic.org/london-2012">London 2012 Olympic Games</a>.  It comprised over 500 photographic portraits of people living, working and studying in the five Olympic host boroughs of Greenwich, Tower Hamlets, Hackney, Newham and Waltham Forest. COUNTO12 was a contribution to the UK National Portrait Gallery/BT’s <a target="_blank" href="http://roadto2012.npg.org.uk/"><cite>Road&nbsp;to&nbsp;2012</cite></a> photography exhibition and was designed as a screensaver that can be installed on Mac and PC&nbsp;computers.</p>
+                    <p>COUNTO12 was a digital clock and countdown timer to the opening ceremony of the <a target="_blank" href="http://www.olympic.org/london-2012">London 2012 Olympic Games</a>.  It comprised over 500 photographic portraits of people living, working and studying in the five Olympic host boroughs of Greenwich, Tower Hamlets, Hackney, Newham and Waltham Forest. COUNTO12 was a contribution to the UK National Portrait Gallery/BT’s <a target="_blank" href="https://www.npg.org.uk/whatson/road-to-2012/">Road&nbsp;to&nbsp;2012</a> photography exhibition and was designed as a screensaver that can be installed on Mac and PC&nbsp;computers.</p>
 
                     <p>In 2011, <cite>Road to 2012</cite> photographer Brian Griffin, sound artist Martyn Ware and film academic Julian Henriques challenged the students of <a target="_blank" href="http://www.gold.ac.uk/">Goldsmith’s University of London</a> to create and contribute digital media works.  The students were asked to explore, experiment and reflect on what the London Olympic and Paralympic Games meant to them, to a neighbourhood, to a community, to East London – and to tell that story. COUNTO12 is one of the resulting&nbsp;works.</p>
 
@@ -115,7 +118,7 @@
 
                     <p>The National Portrait Gallery’s <cite>Road to 2012</cite> was a three-year photography project that recorded the inspirational men and women who worked and trained to make the London Olympic Games happen.  Between 2009 and 2012, numerous photographic portraits celebrated the people, both high-profile and behind the scenes, who collectively prepared the event. At the heart of the project was the exploration of inspirational, personal narratives.  The photographs were displayed at a series of summer exhibitions at the National Portrait Gallery and&nbsp;online.</p>
 
-                    <p>COUNTO12 was screened at the gallery on 5 August 2011 as part of <a target="_blank" href="http://roadto2012.npg.org.uk/participation/reanimate-late-shift-extra"><cite>ReAnimate Late Shift Extra</cite></a>. Late Shift Extra took over the gallery with a night of sensory stimulation exploring the body, movement and the senses with artistic collaborations and interventions of live music, sound art, film, performance and&nbsp;philosophy.</p>
+                    <p>COUNTO12 was screened at the gallery on 5 August 2011 as part of <cite>ReAnimate Late Shift Extra</cite>. Late Shift Extra took over the gallery with a night of sensory stimulation exploring the body, movement and the senses with artistic collaborations and interventions of live music, sound art, film, performance and&nbsp;philosophy.</p>
                 </div>
             </div>
         </div>
