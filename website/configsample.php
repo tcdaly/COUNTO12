@@ -44,6 +44,7 @@
 
     ini_set('log_errors', true);
 
-
+// Short site description
+    define('DESCRIPTION', 'Photographic clock of people living, working and studying in the London 2012 Olympic boroughs.');
 
 ?>
