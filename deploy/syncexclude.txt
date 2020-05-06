@@ -1,0 +1,10 @@
+# list of files to exclude when deploying website to server
+
+logs
+apache2dev.conf
+uaparser
+lib
+bower_components
+mimages
+cache?/*
+counto12.js

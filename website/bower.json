@@ -1,0 +1,24 @@
+{
+  "name": "counto12",
+  "description": "A digital clock and countdown timer to the opening ceremony of the 2012 London Olympic Games",
+  "authors": [
+    "Thomas Daly"
+  ],
+  "license": "MIT",
+  "homepage": "http://counto12.daladi.org/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "2.x",
+    "jquery": "1.9.1",
+    "perfect-scrollbar": "0.4.x",
+    "imagesloaded": "4.1.x",
+    "jquery-mousewheel": "3.0.x"
+  }
+}
