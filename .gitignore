@@ -7,7 +7,6 @@ website/lib
 website/logs/*
 website/mimages
 website/uaparser
-website/www/cache?/*
 website/www/javascript/counto12.min.js
 website/apache2dev.conf
 website/apache2prod.conf
