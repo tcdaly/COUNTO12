@@ -12,4 +12,6 @@ website/www/downloads/*.exe
 website/www/javascript/counto12.min.js
 website/apache2dev.conf
 website/apache2prod.conf
-config.php
+website/config.php
+buildarray.php
+buildjson.php
