@@ -32,11 +32,11 @@ Yujin Yun, [Christina Katsantoni](https://app.yunojuno.com/p/christina-katsanton
 
 ### Programmers (installable screensaver)
 
-Thomas Daly and Stephen Pho
+T. C. Daly and Stephen Pho
 
 ### Programmer (web demo)
 
-[Thomas Daly](http://thomasdaly.co.uk/)
+[T. C. Daly](http://daly.live/)
 
 ### Photographers
 
