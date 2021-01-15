@@ -3,8 +3,8 @@
  * Output a '500 Internal Server Error' page together with a 500 HTTP header.
  * On entry, $err is set to an error message to display
  *
- * @author Thomas Daly
- * @copyright 2013 Thomas Daly
+ * @author T. C. Daly
+ * @copyright 2013 T. C. Daly
  * @license MIT
  */
 

@@ -21,8 +21,8 @@
  *
  * 2. The PHP class 'Image.php' that handles image scaling
  *
- * @author Thomas Daly
- * @copyright 2013 Thomas Daly
+ * @author T. C. Daly
+ * @copyright 2013 T. C. Daly
  * @license MIT
  */
 

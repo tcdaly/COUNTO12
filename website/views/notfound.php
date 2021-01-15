@@ -3,8 +3,8 @@
  * Output a '404 not found' page together with a 404 HTTP header.
  * On entry, $err is set to an error message string to display
  *
- * @author Thomas Daly
- * @copyright 2013 Thomas Daly
+ * @author T. C. Daly
+ * @copyright 2013 T. C. Daly
  * @license MIT
  */
 

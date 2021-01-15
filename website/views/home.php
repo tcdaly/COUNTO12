@@ -4,8 +4,8 @@
  *
  * This HTML view is included by the main application script 'index.php'
  *
- * @author Thomas Daly
- * @copyright 2013 Thomas Daly
+ * @author T. C. Daly
+ * @copyright 2013 T. C. Daly
  * @license MIT
  */
 ?>
@@ -16,7 +16,7 @@
     <meta http-equiv="content-type" content="text/html; charset=<?php echo ini_get('default_charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=9">
     <meta name="google-site-verification" content="<?php echo GOOGLE_VERIFICATION; ?>">
-    <meta name="author" content="Thomas Daly">
+    <meta name="author" content="T. C. Daly">
     <title>Counto12 | London 2012 Olympic Clock</title>
     <meta name="description" content="<?echo DESCRIPTION; ?>">
     <meta name="keywords" content="photo, photograph, portrait, exhibition, clock, london, 2012, olympic, olympics, games, Greenwich, Tower Hamlets, Hackney, Newham, Waltham Forest, digital, media, Goldsmiths, National Portrait Gallery, community, neighbourhood">
@@ -108,7 +108,7 @@
                         </p>
 
                         <h3>CREDITS</h3>
-                        <small>Producers: <strong>Yujin&nbsp;Yun</strong>, <a target="_blank" href="https://app.yunojuno.com/p/christina-katsantoni"><strong>Christina&nbsp;Katsantoni</strong></a> and <strong>Ewa&nbsp;Balazinska</strong>. Photographers: <a target="_blank" href="http://www.londonsartistquarter.org/artist-hub/users/memento8012/profile"><strong>SangDuck&nbsp;Bae</strong></a>, <strong>Paul&nbsp;Yeung</strong>, <strong>Amanda&nbsp;Shiu</strong> and <strong>Tomoko&nbsp;Kinoshita</strong>. Programmers: <strong><a target="_blank" href="http://thomasdaly.co.uk/">Thomas&nbsp;Daly</a></strong> and <strong>Stephen&nbsp;Pho</strong></small>
+                        <small>Producers: <strong>Yujin&nbsp;Yun</strong>, <a target="_blank" href="https://app.yunojuno.com/p/christina-katsantoni"><strong>Christina&nbsp;Katsantoni</strong></a> and <strong>Ewa&nbsp;Balazinska</strong>. Photographers: <a target="_blank" href="http://www.londonsartistquarter.org/artist-hub/users/memento8012/profile"><strong>SangDuck&nbsp;Bae</strong></a>, <strong>Paul&nbsp;Yeung</strong>, <strong>Amanda&nbsp;Shiu</strong> and <strong>Tomoko&nbsp;Kinoshita</strong>. Programmers: <a href="http://daly.live/">T. C. Daly</a></strong> and <strong>Stephen&nbsp;Pho</strong></small>
                     </div>
                     <p>COUNTO12 was a digital clock and countdown timer to the opening ceremony of the <a target="_blank" href="http://www.olympic.org/london-2012">London 2012 Olympic Games</a>.  It comprised over 500 photographic portraits of people living, working and studying in the five Olympic host boroughs of Greenwich, Tower Hamlets, Hackney, Newham and Waltham Forest. COUNTO12 was a contribution to the UK National Portrait Gallery/BT’s <a target="_blank" href="https://www.npg.org.uk/whatson/road-to-2012/">Road&nbsp;to&nbsp;2012</a> photography exhibition and was designed as a screensaver that can be installed on Mac and PC&nbsp;computers.</p>
 

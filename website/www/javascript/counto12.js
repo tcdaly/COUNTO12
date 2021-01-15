@@ -1,7 +1,7 @@
 /**
  * @file Counto12 application client-side javascript
- * @author Thomas Daly (excluding 'RunPrefixMethod' function)
- * @copyright 2013 Thomas Daly (excluding 'RunPrefixMethod' function)
+ * @author T. C. Daly (excluding 'RunPrefixMethod' function)
+ * @copyright 2013 T. C. Daly (excluding 'RunPrefixMethod' function)
  * @license MIT
  */
 

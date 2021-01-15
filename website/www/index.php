@@ -6,8 +6,8 @@
  * details of the device being used to access the site, or returns to the client
  * the application HTML
  *
- * @author Thomas Daly
- * @copyright 2013 Thomas Daly
+ * @author T. C. Daly
+ * @copyright 2013 T. C. Daly
  * @license MIT
  */
 
